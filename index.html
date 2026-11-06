@@ -31,10 +31,39 @@
   .vazio{color:var(--suave);border:1px dashed var(--borda);border-radius:14px;padding:28px}
   footer{margin-top:96px;padding:40px 0 56px;border-top:1px solid var(--borda);text-align:center;color:var(--suave);font-size:.9rem}
   footer strong a{color:var(--texto)}
-</style>
+  .menu{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0;border-bottom:1px solid var(--borda)}
+  .logo{font-family:ui-monospace,Consolas,monospace;font-size:1rem;color:var(--texto)}
+  .logo b{color:var(--acento2)}
+  .links{display:flex;align-items:center;gap:24px;font-size:.9rem}
+  .links a{color:var(--suave)}
+  .links a:hover{color:var(--texto);text-decoration:none}
+  .links .cta{background:var(--acento2);color:#0b1220;padding:8px 14px;border-radius:8px;font-weight:500}
+  .links .cta:hover{color:#0b1220;opacity:.9}
+  details.time{position:relative}
+  details.time summary{list-style:none;cursor:pointer;color:var(--suave)}
+  details.time summary::-webkit-details-marker{display:none}
+  details.time summary:hover,details.time[open] summary{color:var(--texto)}
+  .sub{position:absolute;top:calc(100% + 12px);left:-16px;z-index:10;min-width:230px;background:var(--card);border:1px solid var(--borda);border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:2px}
+  .sub a{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:7px;color:var(--texto)}
+  .sub a:hover{background:var(--borda);text-decoration:none}</style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="menu">
+    <span class="logo"><b>&gt;_</b> consult.ia.br</span>
+    <div class="links">
+      <a href="#secao-projetos">Projetos</a>
+      <details class="time">
+        <summary>Time &#9662;</summary>
+        <div class="sub">
+          <a href="https://www.linkedin.com/in/kilderesobralirineu/" target="_blank" rel="noopener"><span>Kildere Sobral Irineu</span><span>&#8599;</span></a>
+          <a href="https://www.linkedin.com/in/raulsobral/" target="_blank" rel="noopener"><span>Raul Sobral Irineu</span><span>&#8599;</span></a>
+        </div>
+      </details>
+      <a href="#contato">Contato</a>
+      <a class="cta" href="https://wa.me/5583999022201" target="_blank" rel="noopener">Falar com a gente</a>
+    </div>
+  </nav>
   <header>
     <span class="tag">AI-Native</span>
     <h1>Inteligência artificial como <span>resultado</span>, não como licença.</h1>
@@ -42,13 +71,13 @@
   </header>
 
   <main>
-    <h2>Projetos</h2>
+    <h2 id="secao-projetos">Projetos</h2>
     <div id="projetos" class="grid" aria-live="polite">
       <div class="vazio">Carregando projetos…</div>
     </div>
   </main>
 
-  <footer>
+  <footer id="contato">
     <strong><a href="https://www.linkedin.com/in/kilderesobralirineu/" target="_blank" rel="noopener">Kildere Sobral Irineu</a></strong><br>
     Analista e Desenvolvedor de Sistemas - IA<br>
     Administrador de Empresas - MBA Gestão<br>
